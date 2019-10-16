@@ -10,6 +10,14 @@
     $ npm i @types/express --save-dev   # Instalando para desarrollo con --save-dev 
     $ npm i @types/body-parser --save-dev 
 
+# Install MySQL
+    $ npm i --save mysql
+    $ npm i --save mysqljs/mysql
+    $ npm i @types/mysql --save-dev
+
+    ## Doc
+        https://github.com/mysqljs/mysql
+
 # Instalar copiar archivos a rutas
     $ npm i copyfiles --save-dev
     $ npm run html  # Define in package.json "scripts": {"html: "copyfiles --up 1 src/public/.*html dist"}

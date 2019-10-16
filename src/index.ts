@@ -1,5 +1,5 @@
-import Server from "./server/server";
-import router from "../router/router";
+import Server from './server/server';
+import router from './router/router';
 
 const port = 3000;
 

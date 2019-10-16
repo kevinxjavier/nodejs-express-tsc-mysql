@@ -17,6 +17,7 @@ export default class Server {
         return new Server(port);
     }
 
+    // No hace falta con TypeScript el: support application/json type post data
     private enableJson() {
     // support application/json type post data
         this.app.use(bodyParser.json());
@@ -35,8 +36,8 @@ export default class Server {
     //     this.folder();
     // }
     start() {
+        //this.enableJson();
         this.app.listen(this.port);
-        this.enableJson();
         this.folder();
     }
 }

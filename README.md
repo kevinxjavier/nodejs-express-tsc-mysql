@@ -1,4 +1,5 @@
-# Install Google Chrome Extension: JSON Viewer
+# Install Google Chrome Extension: 
+    JSON Viewer
 
 # Install VSCode: TypeScript Importer
     Ayuda a import clases con tan solo escribier el nombre Server me importa la clase
@@ -6,8 +7,8 @@
 
 # Install paquete de definicion express y body-parser de NodeJS para Typescript
 # Paquete que tengan archivos de definicion para TypeScript empiezan con @types
-    $ npm i @types/express --save-dev   # Instalando para desarrollo      
-    $ npm install --save-dev @types/body-parser
+    $ npm i @types/express --save-dev   # Instalando para desarrollo con --save-dev 
+    $ npm i @types/body-parser --save-dev 
 
 # Instalar copiar archivos a rutas
     $ npm i copyfiles --save-dev
@@ -33,3 +34,4 @@
 
 # Ejecutar
     $ npm run build
+    $ curl http://localhost:3000

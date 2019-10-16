@@ -1,9 +1,14 @@
 # Install Google Chrome Extension: 
     JSON Viewer
 
-# Install VSCode: TypeScript Importer
-    Ayuda a import clases con tan solo escribier el nombre Server me importa la clase
-    import Server from "./server/server";
+# Install VSCode: 
+    mysql-inline-decorator
+        Remarca sintaxis SQL. 
+        const sql = `SELECT * FROM usuarios`; se muestran resaltadas las palabras reservadas y no como un string.
+
+    TypeScript Importer
+        Ayuda a import clases con tan solo escribier el nombre Server me importa la clase
+        import Server from "./server/server";
 
 # Install paquete de definicion express y body-parser de NodeJS para Typescript
 # Paquete que tengan archivos de definicion para TypeScript empiezan con @types

@@ -1,5 +1,4 @@
 import mysql = require('mysql');
-import { runInThisContext } from 'vm';
 
 export default class MySQL {
 
@@ -27,6 +26,18 @@ export default class MySQL {
         return this._instance || (this._instance = new this());
     }
 
+    static consulta(sql: string, callback: Function) {
+        this.instance.conn.query(sql, (err, results: Object[], fields) => {
+            if (err) 
+                return callback(err);
+
+            if (results.length) 
+                return callback('No existen registros.');
+
+            return callback(null, results);
+        });
+    }
+
     private connectDB() {
         this.conn.connect((err: mysql.MysqlError) => {
             if (err) 
@@ -34,7 +45,7 @@ export default class MySQL {
 
             this.status = true;
             console.log('Database connected!');
-            
         });
     }
+
 }

@@ -12,6 +12,6 @@ server.app.use( router );
 MySQL.instance;                 // Usar esta implementacion, ya que es Singleton
 
 // server.start(() => {
-    //     console.log(`Servidor corriendo en el puerto ${port}`);    
-    // });
+//     console.log(`Servidor corriendo en el puerto ${port}`);    
+// });
 server.start();

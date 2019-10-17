@@ -31,7 +31,7 @@ export default class MySQL {
             if (err) 
                 return callback(err);
 
-            if (results.length) 
+            if (!results.length) 
                 return callback('No existen registros.');
 
             return callback(null, results);

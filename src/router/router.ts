@@ -8,20 +8,30 @@ router.get('/api', (req: Request, res: Response) => {
 });
 
 router.get('/usuarios', (req: Request, res: Response) => {
-    const sql = `SELECT * FROM usuarios`;
+    const sql = 'SELECT * FROM usuarios';
 
     MySQL.consulta(sql, (err: any, usuarios: Object[]) => {
         if(err) 
             return res.status(400).json({status: 'Failed', error: err});
-        
+
         res.json({status: 'Ok', usuarios});
     });
-    
 });
 
 router.get('/usuario/:id', (req: Request, res: Response) => {
     const id = req.params.id;
-    res.json({ok: true, mensaje: 'Todo esta bien ${id}', id});
+
+// Evitando inyecccion de dedpendencia
+    const escapeId = MySQL.instance.conn.escape(id);
+
+    const sql = `SELECT * FROM usuarios WHERE id = ${escapeId}`;
+
+    MySQL.consulta(sql, (err: any, usuarios: Object[]) => {
+        if(err) 
+            return res.status(400).json({status: 'Failed', error: err});
+
+        res.json({status: 'Ok', usuarios: usuarios[0]});
+    });
 });
 
 export default router;
